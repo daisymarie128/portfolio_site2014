@@ -8,10 +8,10 @@ app.AboutView = Backbone.View.extend({
   },
 
   initialize: function () {
-    if (app.currentView) {
-      app.currentView.remove();
-    }
-    app.currentView = this;
+    // if (app.currentView) {
+    //   app.currentView.remove();
+    // }
+    // app.currentView = this;
   },
 
   render: function () {
