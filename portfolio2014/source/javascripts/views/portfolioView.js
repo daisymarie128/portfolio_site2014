@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.indexView = Backbone.View.extend({
+app.PortfolioView = Backbone.View.extend({
   tagName: 'div',
 
   events: {
@@ -15,7 +15,11 @@ app.indexView = Backbone.View.extend({
   },
 
   render: function () {
-    var IndexView = Handlebars.compile(app.templates.indexView);
+    var portfolioView = app.templates.portfolioView;
+    // _.template(app.templates.aboutView);
+    this.$el.html(portfolioView);
+    console.log('rendering')
+    $('#content').html(this.el);
     var $container = this.$el.find('#portfolio-content');
     // init
     $container.isotope({

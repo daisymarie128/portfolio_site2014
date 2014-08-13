@@ -24,8 +24,10 @@
 
 <!-- ////////////////////////////////////////////// about-template //////////// -->
 <script type='text/template' id='portfolio-template'>
+<div id="container" class="js-isotope"
+  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
   <div id="portfolio-content">
-
+    <p>this is the portfolio page</p>
     <div id="filters" class="button-group">
       <button data-filter="*">show all</button>
       <button data-filter=".web-development">Web Development</button>
@@ -33,7 +35,7 @@
     </div>
 
     <div class="project-item web-development three-js">
-      <img src="project-1.jpeg">
+      <a href="#project1"><img src="project-1.jpeg"></a>
     </div><!--///////close project-item //////-->
 
     <div class="project-item web-development">

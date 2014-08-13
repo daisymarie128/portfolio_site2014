@@ -9,9 +9,27 @@ app.Router = Backbone.Router.extend({
   },
 
   initialize: function () {
+    app.posts = new app.Posts([
+      new app.Project({
+        id: 1, title: 'Project 1',
+        content: 'Backbone is hell',
+        image: [
+          'one',
+          'two'
+        ]),
+       new app.Project({
+        id: 2, title: 'Project 2',
+        content: 'Backbone is hell',
+        image: [
+          'one',
+          'two'
+        ],
+        video: [
+          'one'
+        ])
 
+    ]);
   },
-
   index: function () {
     // if (app.currentView) {
     //   app.currentView.remove();
@@ -23,6 +41,11 @@ app.Router = Backbone.Router.extend({
   aboutView: function () {
     var aboutView = new app.AboutView();
     aboutView.render();
+  },
+
+  portfolioView: function () {
+    var portfolioView = new app.PortfolioView();
+    portfolioView.render();
   }
 });
 
