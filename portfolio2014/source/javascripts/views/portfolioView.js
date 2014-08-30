@@ -15,6 +15,7 @@ app.PortfolioView = Backbone.View.extend({
   },
 
   render: function () {
+    console.log('portfolio view is loading')
     var portfolioView = app.templates.portfolioView;
     // _.template(app.templates.aboutView);
     this.$el.html(portfolioView);
@@ -24,7 +25,7 @@ app.PortfolioView = Backbone.View.extend({
     // init
     $container.isotope({
       // options
-      itemSelector: '.project',
+      itemSelector: '.project-item',
       layoutMode: 'fitRows'
     });
   },
