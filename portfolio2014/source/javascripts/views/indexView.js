@@ -1,7 +1,7 @@
 var app = app || {};
 
-app.indexView = Backbone.View.extend({
-  el: 'content',
+app.IndexView = Backbone.View.extend({
+  tagName: 'div',
 
   events: {
 
@@ -15,7 +15,13 @@ app.indexView = Backbone.View.extend({
   },
 
   render: function () {
-    var indexView = this.template();
+    // var indexView = this.template();
+    // this.$el.html(indexView);
+
+    var indexView = app.templates.indexView;
+    // _.template(app.templates.aboutView);
     this.$el.html(indexView);
+    $('#content').html(this.el);
+    console.log('rendering index')
   }
 })

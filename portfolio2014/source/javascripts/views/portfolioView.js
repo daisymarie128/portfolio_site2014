@@ -4,7 +4,7 @@ app.PortfolioView = Backbone.View.extend({
   tagName: 'div',
 
   events: {
-
+    'click #filters button': 'filterButton'
   },
 
   initialize: function () {
@@ -19,9 +19,10 @@ app.PortfolioView = Backbone.View.extend({
     var portfolioView = app.templates.portfolioView;
     // _.template(app.templates.aboutView);
     this.$el.html(portfolioView);
-    console.log('rendering')
+    console.log('rendering portfolio view')
     $('#content').html(this.el);
-    var $container = this.$el.find('#portfolio-content');
+    // $('#portfolio-content').isotope()
+    var $container = $('#image-holder');
     // init
     $container.isotope({
       // options
@@ -30,15 +31,22 @@ app.PortfolioView = Backbone.View.extend({
     });
   },
 
-  filterButton: function () {
+  filterButton: function (e) {
     // init Isotope
-    var $container = $('#container').isotope({
-      // options
+
+    var $container = $('#image-holder').isotope({
+      itemSelector: '.project-item',
+      layoutMode: 'fitRows'
     });
+    console.log("container ", $container)
     // filter items on button click
-    $('#filters').on( 'click', 'button', function() {
-      var filterValue = $(this).attr('data-filter');
+    // $('#filters').on( 'click', 'button', function() {
+      var $src = $(e.currentTarget)
+      var filterValue = $src.attr('data-filter');
+      console.log("ello", e.currentTarget)
+      console.log("filter value " + filterValue);
       $container.isotope({ filter: filterValue });
-    });
+    // });
+    console.log('its reaching the filtering function');
   }
 });

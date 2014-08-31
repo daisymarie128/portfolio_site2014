@@ -2,7 +2,7 @@ var app = app || {};
 
 app.Router = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    '': 'indexView',
     'about': 'aboutView',
     'portfolio': 'portfolioView',
     'portfolio/project': 'projectView'
@@ -32,12 +32,12 @@ app.Router = Backbone.Router.extend({
 
     // })
   },
-  index: function () {
+  indexView: function () {
     // if (app.currentView) {
     //   app.currentView.remove();
     // }
-    // var appView = new app.AppView()
-    // appView.render();
+    var indexView = new app.IndexView()
+    indexView.render();
   },
 
   aboutView: function () {
