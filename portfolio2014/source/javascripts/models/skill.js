@@ -1,7 +1,7 @@
 var app = app || {};
 
-app.Project = Backbone.Model.extend({
-  urlRoot: '/project',
+app.Skill = Backbone.Model.extend({
+  urlRoot: '/skill',
   defaults: {
     id: 0,
     filterTags: "tags",

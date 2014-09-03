@@ -102,19 +102,18 @@
   <div><!--///close about-content //////////////////// -->
 </script>
 
-<!--/////////////////////////////////////////////project template ////////////-->
+<!--/////////////////////////////////////////////project model template ////////////-->
 
 <script type='text/template' id='project-model-template'>
   <div class="project-item {{filterTags}}">
     <div class="item">
       <li class="title">{{title}}</li>
-      <li class="title">{{content}}</li>
       <img src="{{featureImage}}" class="view-project">
     </div><!--///////// close item////////-->
   </div><!--///////close project-item //////-->
 </script>
 
-<!--/////////////////////////////////////////////individual project template ////////////-->
+<!--/////////////////////////////////////////////portfolio template ////////////-->
 
 <script type='text/template' id='portfolio-template'>
     <h2>PORTFOLIO?</h2>
@@ -145,6 +144,51 @@
         <li class="title"><h2>{{content}}</h2></li>
         <img src="{{featureImage}}">
       </div><!--///////close project-item //////-->
+    </ul>
+</script>
+
+<!--/////////////////////////////////////////////skills model template ////////////-->
+
+<script type='text/template' id='skills-model-template'>
+  <div class="skill-item {{filterTags}}">
+    <div class="item">
+      <li class="title">{{title}}</li>
+      <img src="{{featureImage}}" class="view-project">
+    </div><!--///////// close item////////-->
+  </div><!--///////close skill-item //////-->
+</script>
+
+<!--///////////////////////////////////////////// skills template ////////////-->
+
+<script type='text/template' id='skills-template'>
+    <h2>skills?</h2>
+    <div id="skill-container" class="js-isotope"
+  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+  <div id="skill-content">
+    <div id="filters" class="button-group">
+      <button data-filter="*">show all</button>
+      <button data-filter=".web-development">Web Development</button>
+      <button data-filter=".three-js">Three js</button>
+    </div><!--///////////close filters //////-->
+
+    <div id="image-holder">
+      <ul id="skills">
+
+    </ul>
+    </div><!--//////////// close image holder ////////////-->
+
+  <div><!--///close skill-content //////////////////// -->
+</script>
+
+<!--/////////////////////////////////////////////individual skill template ////////////-->
+
+<script type='text/template' id='skill-template'>
+    <ul>
+      <div class="skill-item">
+        <li class="title"><h2>{{title}}</h2></li>
+        <li class="title"><h2>{{content}}</h2></li>
+        <img src="{{featureImage}}">
+      </div><!--///////close skill-item //////-->
     </ul>
 </script>
 

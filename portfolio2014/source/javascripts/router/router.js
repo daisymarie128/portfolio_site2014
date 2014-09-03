@@ -5,7 +5,9 @@ app.Router = Backbone.Router.extend({
     '': 'indexView',
     'about': 'aboutView',
     'portfolio': 'portfolioView',
-    'project/:id': 'projectView'
+    'project/:id': 'projectView',
+    'skills': 'skillsView',
+    'skill/:id': 'skillView'
   },
 
   initialize: function () {
@@ -20,8 +22,7 @@ app.Router = Backbone.Router.extend({
           'one',
           'two'
         ],
-        projectLink: '',
-        contributors: ''
+        projectLink: 'http://photocrapper.herokuapp.com/'
       }),
        new app.Project({
         id: 2,
@@ -36,8 +37,37 @@ app.Router = Backbone.Router.extend({
         video: [
           'one'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/',
-        contributors: ''
+        projectLink: 'http://tadx-threedee.herokuapp.com/'
+      }),
+       new app.Project({
+        id: 3,
+        title: 'Threedee',
+        filterTags: 'web-development',
+        content: 'Backbone is hell',
+        featureImage: 'images/specimen3.jpg',
+        image: [
+          'one',
+          'two'
+        ],
+        video: [
+          'one'
+        ],
+        projectLink: 'http://tadx-threedee.herokuapp.com/'
+      }),
+       new app.Project({
+        id: 4,
+        title: 'Threedee',
+        filterTags: 'web-development',
+        content: 'Backbone is hell',
+        featureImage: 'images/specimen3.jpg',
+        image: [
+          'one',
+          'two'
+        ],
+        video: [
+          'one'
+        ],
+        projectLink: 'http://tadx-threedee.herokuapp.com/'
       })
     ])
   },
@@ -63,6 +93,17 @@ app.Router = Backbone.Router.extend({
     var project = app.projects.get(id)
     var projectView = new app.ProjectView({model: project });
     projectView.render();
+  },
+
+  skillsView: function () {
+    var skillsView = new app.SkillsView({ collection: app.skills });
+    skillsView.render();
+  },
+
+  skillView: function (id) {
+    var skill = app.skills.get(id)
+    var skillView = new app.SkillView({model: skill });
+    skillView.render();
   }
 });
 
