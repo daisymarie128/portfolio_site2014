@@ -1,9 +1,9 @@
 var app = app || {};
 
-app.ProjectModelView = Backbone.View.extend({
+app.SkillModelView = Backbone.View.extend({
   tagName: 'div',
   events: {
-    'click .view-project': 'viewProject'
+    'click .view-skill': 'viewSkill'
   },
 
   initialize: function () {
@@ -12,12 +12,12 @@ app.ProjectModelView = Backbone.View.extend({
 
   render: function () {
     console.log(this.model)
-    var template = Handlebars.compile( app.templates.projectModelView )
+    var template = Handlebars.compile( app.templates.skillModelView )
     this.$el.html( template( this.model.toJSON() ) )
     return this.$el
   },
 
-  viewProject: function () {
-    app.router.navigate("project/" + this.model.get('id'), true)
+  viewSkill: function () {
+    app.router.navigate("skill/" + this.model.get('id'), true)
   }
 });
