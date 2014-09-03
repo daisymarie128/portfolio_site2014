@@ -121,7 +121,6 @@
     <div id="portfolio-container" class="js-isotope"
   data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
   <div id="portfolio-content">
-    <p>this is the portfolio page</p>
     <div id="filters" class="button-group">
       <button data-filter="*">show all</button>
       <button data-filter=".web-development">Web Development</button>
@@ -141,14 +140,11 @@
 
 <script type='text/template' id='project-template'>
     <ul>
-      {{#each project}}
-        <div class="project-item">
-          <div class="item">
-            <li class="title"><h2>{{title}}</h2></li>
-            <a href="#project1"><img src="{{featureImage.url}}"></a>
-          </div><!--///////// close item////////-->
+      <div class="project-item">
+        <li class="title"><h2>{{title}}</h2></li>
+        <li class="title"><h2>{{content}}</h2></li>
+        <img src="{{featureImage}}">
       </div><!--///////close project-item //////-->
-      {{/each}}
     </ul>
 </script>
 

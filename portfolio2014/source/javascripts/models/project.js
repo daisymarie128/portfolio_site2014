@@ -9,6 +9,8 @@ app.Project = Backbone.Model.extend({
     content: 'all my dumb content should do here',
     featureImage: '',
     image: [],
-    video: []
+    video: [],
+    projectLink: '',
+    contributors: ''
   }
 });

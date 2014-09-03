@@ -29,12 +29,12 @@ app.PortfolioView = Backbone.View.extend({
     console.log(list)
     this.$el.html( portfolioView );
     var ul = list.$el.find('#portfolio')
+
     app.projects.each(function(project){
-      // console.log("this is supposed to be a project?" + project);
       var projectView = new app.ProjectModelView( {model: project} );
       ul.append( projectView.render() );
-      // console.log(ul)
     })
+
     this.$el.attr('id', 'all-project-view');
     $('#container').append( this.el );
     // console.log(this.el)

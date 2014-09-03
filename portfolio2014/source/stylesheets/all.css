@@ -114,10 +114,12 @@ nav a:focus {
 
 #image-holder{
   position: relative;
+  width: 100%;
 }
 
 .item {
   width: 100%;
+  position: relative;
 }
 
 .item img{
@@ -161,6 +163,7 @@ nav a:focus {
   display: inline-block;
   width: 25%;
   padding-right: 0.5%;
+  position: relative;
 }
 
 /*.isotope {
