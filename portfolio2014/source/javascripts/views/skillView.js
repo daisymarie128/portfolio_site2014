@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.ProjectView = Backbone.View.extend({
+app.SkillView = Backbone.View.extend({
   tagName: 'div',
 
   events: {
@@ -15,12 +15,12 @@ app.ProjectView = Backbone.View.extend({
 
   render: function () {
     var list = this;
-    var projectView = Handlebars.compile(app.templates.projectView);
-    var copy = projectView( this.model.toJSON() );
-    list.$el.html( projectView( this.model.toJSON() ) );
-      list.$el.attr('id', 'pub-challenges-view');
+    var skillView = Handlebars.compile(app.templates.skillView);
+    var copy = skillView( this.model.toJSON() );
+    list.$el.html( skillView( this.model.toJSON() ) );
+      list.$el.attr('id', 'skill-view');
       $('#content').append( list.el );
-      console.log(projectView( this.model.toJSON() ))
+      console.log(skillView( this.model.toJSON() ))
       console.log('hellll')
   }
 });
