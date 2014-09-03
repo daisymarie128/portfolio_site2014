@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.PortfolioView = Backbone.View.extend({
+app.SkillsView = Backbone.View.extend({
   tagName: 'div',
 
   events: {
@@ -17,17 +17,17 @@ app.PortfolioView = Backbone.View.extend({
   render: function () {
     var list = this
     console.log(list)
-    var portfolioView = Handlebars.compile(app.templates.portfolioView);
+    var skillsView = Handlebars.compile(app.templates.skillsView);
     console.log(list)
-    this.$el.html( portfolioView );
-    var ul = list.$el.find('#portfolio')
+    this.$el.html( skillsView );
+    var ul = list.$el.find('#skills')
 
-    app.projects.each(function(project){
-      var projectView = new app.ProjectModelView( {model: project} );
-      ul.append( projectView.render() );
+    app.skills.each(function(skill){
+      var skillView = new app.SkillModelView( {model: skill} );
+      ul.append( skillView.render() );
     })
 
-    this.$el.attr('id', 'all-project-view');
+    this.$el.attr('id', 'all-skill-view');
     $('#container').append( this.el );
   },
 
