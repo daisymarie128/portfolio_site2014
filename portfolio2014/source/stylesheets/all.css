@@ -117,11 +117,15 @@ nav a:focus {
 }
 
 .item {
-  width: 25%;
+  width: 100%;
+}
+
+.item img{
+  width: 100%;
 }
 
 .item.w2 {
-  width: 50%;
+  width: 100%;
 }
 
 
@@ -153,3 +157,21 @@ nav a:focus {
   top: 6%;
 }
 
+.project-item {
+  display: inline-block;
+  width: 25%;
+  padding-right: 0.5%;
+}
+
+/*.isotope {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+ clear fix
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+*/

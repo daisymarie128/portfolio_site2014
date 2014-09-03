@@ -5,32 +5,38 @@ app.Router = Backbone.Router.extend({
     '': 'indexView',
     'about': 'aboutView',
     'portfolio': 'portfolioView',
-    'portfolio/project': 'projectView'
+    'project/:id': 'projectView'
   },
 
   initialize: function () {
-    // app.posts = new app.Posts([
-    //   new app.Project({
-    //     id: 1, title: 'Project 1',
-    //     content: 'Backbone is hell',
-    //     image: [
-    //       'one',
-    //       'two'
-    //     ]
-    //   })
-    // ]),
-    //    new app.Project({
-    //     id: 2, title: 'Project 2',
-    //     content: 'Backbone is hell',
-    //     image: [
-    //       'one',
-    //       'two'
-    //     ],
-    //     video: [
-    //       'one'
-    //     ]
+    app.projects = new app.Projects([
+      new app.Project({
+        id: 1,
+        filterTags: 'three-js',
+        title: 'Project 1',
+        content: 'Backbone is hell',
+        featureImage: 'images/specimen3.jpg',
+        image: [
+          'one',
+          'two'
+        ]
+      }),
+       new app.Project({
+        id: 2,
+        title: 'Project 2',
+        filterTags: 'web-development',
+        content: 'Backbone is hell',
+        featureImage: 'images/specimen3.jpg',
+        image: [
+          'one',
+          'two'
+        ],
+        video: [
+          'one'
+        ]
 
-    // })
+      })
+    ])
   },
   indexView: function () {
     // if (app.currentView) {
@@ -46,8 +52,14 @@ app.Router = Backbone.Router.extend({
   },
 
   portfolioView: function () {
-    var portfolioView = new app.PortfolioView();
+    var portfolioView = new app.PortfolioView({ collection: app.projects });
     portfolioView.render();
+  },
+
+  projectView: function (id) {
+    var project = app.projects.get(id)
+    var projectView = new app.ProjectView({model: projects });
+    projectView.render();
   }
 });
 

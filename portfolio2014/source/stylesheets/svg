@@ -1,12 +1,4 @@
-<div id="content">
-</div><!--//// close content ////////-->
-<!-- ////////////////////////////////////////////// index-template //////////// -->
-<script type='text/template' id='index-template'>
-  <div id="index-content">
-
-  <!-- //// add a static effect over the top of this image with javascript -->
-  <div class="index-logo">
-    <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -83,72 +75,3 @@
         <rect x="436.192" y="253.066" transform="matrix(0.7242 0.6896 -0.6896 0.7242 303.5016 -234.722)" fill="#FFFFFF" width="18.001" height="18.001"/>
 </g>
 </svg>
-
-  </div><!--//////// close index-logo ///////////////-->
-
-    <div class="videoContainer">
-      <video autoplay loop>
-        <source src="images/vid06.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-      </video>
-    </div>
-
-  <div><!--///close index-content //////////////////// -->
-</script>
-
-<!-- ////////////////////////////////////////////// about-template //////////// -->
-<script type='text/template' id='about-template'>
-  <div id="about-content">
-    <p>dkdsjkdfkjdfkjskjdfkjdfks</p>
-  <div><!--///close about-content //////////////////// -->
-</script>
-
-<!--/////////////////////////////////////////////project template ////////////-->
-
-<script type='text/template' id='project-model-template'>
-  <div class="project-item {{filterTags}}">
-    <div class="item">
-      <li class="title">{{title}}</li>
-      <li class="title">{{content}}</li>
-      <img src="{{featureImage}}" class="view-project">
-    </div><!--///////// close item////////-->
-  </div><!--///////close project-item //////-->
-</script>
-
-<!--/////////////////////////////////////////////individual project template ////////////-->
-
-<script type='text/template' id='portfolio-template'>
-    <h2>PORTFOLIO?</h2>
-    <div id="portfolio-container" class="js-isotope"
-  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
-  <div id="portfolio-content">
-    <p>this is the portfolio page</p>
-    <div id="filters" class="button-group">
-      <button data-filter="*">show all</button>
-      <button data-filter=".web-development">Web Development</button>
-      <button data-filter=".three-js">Three js</button>
-    </div><!--///////////close filters //////-->
-
-    <div id="image-holder">
-      <ul id="portfolio">
-
-    </ul>
-    </div><!--//////////// close image holder ////////////-->
-
-  <div><!--///close portfolio-content //////////////////// -->
-</script>
-
-<!--/////////////////////////////////////////////individual project template ////////////-->
-
-<script type='text/template' id='project-template'>
-    <ul>
-      {{#each project}}
-        <div class="project-item">
-          <div class="item">
-            <li class="title"><h2>{{title}}</h2></li>
-            <a href="#project1"><img src="{{featureImage.url}}"></a>
-          </div><!--///////// close item////////-->
-      </div><!--///////close project-item //////-->
-      {{/each}}
-    </ul>
-</script>
-
