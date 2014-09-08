@@ -29,19 +29,5 @@ app.SkillsView = Backbone.View.extend({
 
     this.$el.attr('id', 'all-skill-view');
     $('#container').append( this.el );
-  },
-
-  filterButton: function (e) {
-    // init Isotope
-    var $container = $('#image-holder').isotope({
-      itemSelector: '.project-item',
-      layoutMode: 'fitRows'
-    });
-
-    var $src = $(e.currentTarget)
-    var filterValue = $src.attr('data-filter');
-
-    $container.isotope({ filter: filterValue });
-
   }
 });

@@ -1,10 +1,11 @@
 var app = app || {};
 
 app.PortfolioView = Backbone.View.extend({
-  tagName: 'div',
+  tagName: 'ul',
 
   events: {
-    'click #filters button': 'filterButton'
+    'click #filters button': 'filterButton',
+    'load window': 'finishedLoading'
   },
 
   initialize: function () {
@@ -21,32 +22,41 @@ app.PortfolioView = Backbone.View.extend({
     // this.$el.html(portfolioView);
     // console.log('rendering portfolio view')
     // $('#content').html(this.el);
-
+    $('body').css({'background-color': '#FFF'})
     // this is the new code for the project model i hope this works
     var list = this
-    console.log(list)
+    // console.log(list)
     var portfolioView = Handlebars.compile(app.templates.portfolioView);
-    console.log(list)
+    // console.log(list)
     this.$el.html( portfolioView );
+    console.log(this.$el)
     var ul = list.$el.find('#portfolio')
+    console.log('rendering')
 
     app.projects.each(function(project){
       var projectView = new app.ProjectModelView( {model: project} );
       ul.append( projectView.render() );
     })
 
-    this.$el.attr('id', 'all-project-view');
-    $('#container').append( this.el );
-    // console.log(this.el)
 
-    // // $('#portfolio-content').isotope()
-    // var $container = $('#image-holder');
-    // // init
-    // $container.isotope({
-    //   // options
-    //   itemSelector: '.project-item',
-    //   layoutMode: 'fitRows'
-    // });
+    this.$el.attr('id', 'all-project-view');
+    console.log(this.el)
+    // debugger;
+    // $('#portfolio-content').isotope()
+    // console.log($('#image-holder'))
+    var $container = $('#image-holder').isotope({
+    // init
+      // options
+      itemSelector: '.project-item',
+      layoutMode: 'fitRows'
+
+    });
+
+    // $container.imagesLoaded(function(){
+    //   $container.isotope('layout')
+    // })
+    $('#content').append( this.el );
+    // console.log($container.isotope().filter)
   },
 
   filterButton: function (e) {
@@ -62,9 +72,13 @@ app.PortfolioView = Backbone.View.extend({
       var $src = $(e.currentTarget)
       var filterValue = $src.attr('data-filter');
       // console.log("ello", e.currentTarget)
-      // console.log("filter value " + filterValue);
+      console.log("filter value " + filterValue);
       $container.isotope({ filter: filterValue });
     // });
     // console.log('its reaching the filtering function');
+  },
+  after: function(e) {
+    console.log('string')
+    console.log(e);
   }
 });

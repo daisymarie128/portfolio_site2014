@@ -1,0 +1,462 @@
+@font-face { font-family: Avenir Next; src: url('Avenir Next.ttc'); }
+@font-face { font-family: Insaniburger; src: url('Insanibu.ttf'); }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #FFF;
+}
+
+
+
+header{
+  /*background-color: #7BC794;*/
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  z-index: 3;
+  top: 0;
+}
+
+#container{
+  width: 100%;
+}
+
+#content{
+
+}
+
+/* Code for Firefox */
+::-moz-selection {
+    color: #000;
+    background: #7BC794;
+}
+
+::selection {
+    color: #000;
+    background: #7BC794;
+}
+
+/*////////////////////////nav bar style ///////////*/
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 5px;
+  outline: none;
+  color: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+}
+
+
+.nav-bar a {
+  padding: 0.5em;
+  color: #333333;
+/*  font-weight: 700;*/
+  text-shadow: none;
+  font-family: Insaniburger;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.nav-bar a::before,
+.nav-bar a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #7BC794;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.nav-bar a::before {
+  top: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.nav-bar a::after {
+  bottom: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.nav-bar a:hover,
+.nav-bar a:focus {
+  color: #7BC794;
+}
+
+.nav-bar a:hover::before,
+.nav-bar a:focus::before,
+.nav-bar a:hover::after,
+.nav-bar a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/*////////////////////////index style ///////////*/
+
+/*.bannana-box{
+  width: 100%;
+  z-index: 2;
+}*/
+
+.bannana{
+    width: 100%;
+    position: relative;
+    top: -300%;
+/*    left: 34%;
+    margin: auto;
+    top: -300%;
+    position: absolute;*/
+    z-index: 2;
+    opacity: 0.9;
+
+}
+
+.bannana{
+
+}
+
+.developer, .animator, .designer, .idiot{
+  text-align: center;
+  font-family: Avenir Next;
+  font-weight: 900;
+  display: none;
+  margin: 0;
+  position: absolute;
+  line-height: 1em;
+  letter-spacing: 0;
+  word-spacing: 0;
+  /*opacity: 0;*/
+}
+
+.developer{
+  font-size: 6em;
+  z-index: 3;
+  margin-top: 12%;
+}
+
+.animator{
+  font-size: 6.4em;
+  z-index: 1;
+  margin-top: 17%;
+}
+
+.designer{
+  font-size: 7em;
+  z-index: 1;
+  margin-top: 22.2%;
+}
+
+.idiot{
+  font-size: 13em;
+  z-index: 3;
+  margin-top: 27.2%;
+}
+
+.index-logo{
+  width: 40%;
+  height: 550px;
+  margin: auto;
+  z-index: 2;
+}
+
+/*////////////////////////about style ///////////*/
+
+
+#about-content{
+  position: relative;
+  top: 90px;
+}
+
+/*////////////////////////portfolio style ///////////*/
+
+
+#all-project-view, #about-content{
+  position: relative;
+  width: 80%;
+  top: 100px;
+  padding: 0;
+  margin: auto;
+}
+
+#portfolio{
+  padding: 0;
+}
+
+#portfolio-content{
+  position: relative;
+}
+
+#filters{
+  position: relative;
+}
+
+#image-holder{
+  position: relative;
+  width: 100%;
+  height: 412px;
+}
+
+.item {
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+
+.item img{
+  width: 100%;
+}
+
+.item.w2 {
+  width: 100%;
+}
+
+
+#index-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.videoContainer
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+.videoContainer video
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+span{
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.project-item {
+  display: inline-block;
+  width: 25%;
+  padding-right: 0.5%;
+  /*position: relative;*/
+}
+
+.isotope {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+ /*clear fix*/
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.main-filter{
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.back{
+  width: auto;
+  max-width: 5%;
+  background-color: #7BC794;
+  border: 0;
+  position: relative;
+  padding: 10px;
+  font-size: 0.7em;
+  color: #FFF;
+  text-decoration: none;
+  /*padding-top: 2%;*/
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-appearance:none;
+  width: auto;
+  text-align: center;
+    margin-left: 1em;
+}
+
+.back a{
+  padding: 0.5em;
+  color: #333333;
+/*  font-weight: 700;*/
+  text-shadow: none;
+  font-family: Insaniburger;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+
+button{
+  background-color: #7BC794;
+  border: 0;
+/*  border-bottom: 5px solid #000;
+  border-right: 5px solid #000;*/
+/*  text-shadow: 0px -2px #D1B358;*/
+  position: relative;
+  padding: 5px 30px;
+  font-size: 0.8em;
+  color: #FFF;
+  text-decoration: none;
+  /*padding-top: 2%;*/
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-appearance:none;
+  width: auto;
+  text-align: center;
+}
+
+button:hover{
+  background-color: #000;
+/*  border: none;
+outline: none;*/
+}
+
+button:visited{
+  background-color: #7BC794;
+}
+
+button:active{
+  background-color: #7BC794;
+  border: none;
+  outline: none;
+}
+
+.main-filter{
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 10px 40px;
+}
+
+.project-image{
+  width: 50%;
+}
+
+.project-image img{
+  width: 100%;
+}
+
+.title{
+  text-transform: uppercase;
+  width: 50%;
+  list-style: none;
+}
+
+.content{
+  width: 50%;
+  list-style: none;
+}
+
+/*///////// skills style /////////////*/
+
+#all-skill-view{
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+/*///////// about style /////////////*/
+
+#about-content p{
+  font-family: Avenir Next;
+}
+
+.hello{
+  font-family: Avenir Next;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.line{
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+}
+
+#quick-facts, #boring-facts, #contact{
+  width: 50%;
+  padding: 2%;
+  background-color: #7BC794;
+  margin-top: 2%;
+  display: inline-block;
+}
+
+#quick-facts, #contact{
+  margin-left: 50%;
+}
+
+#quick-facts li, #contact li, ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#quick-facts ul, #contact ul{
+  list-style: none;
+  margin: 0;
+}
+
+#quick-facts{
+
+}
+
+.qf-title, .bf-title, .contact-title{
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+
+
+

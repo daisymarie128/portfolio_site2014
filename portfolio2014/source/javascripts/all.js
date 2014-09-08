@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require lib/jquery-1.11.1
+//= require lib/isotope.pkgd.min.js
 //= require lib/underscore
 //= require lib/backbone
 //= require lib/handlebars

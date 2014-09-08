@@ -2,6 +2,7 @@ var app = app || {};
 
 app.ProjectModelView = Backbone.View.extend({
   tagName: 'div',
+  className: 'project-item',
   events: {
     'click .view-project': 'viewProject'
   },
@@ -13,6 +14,7 @@ app.ProjectModelView = Backbone.View.extend({
   render: function () {
     console.log(this.model)
     var template = Handlebars.compile( app.templates.projectModelView )
+    this.$el.addClass( this.model.get('filterTags') )
     this.$el.html( template( this.model.toJSON() ) )
     return this.$el
   },
