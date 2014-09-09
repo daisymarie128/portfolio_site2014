@@ -30,7 +30,7 @@ app.Router = Backbone.Router.extend({
         title: 'Threedee',
         filterTags: 'web-development rails three-js javascript',
         content: 'This web application was created as part of a team, who all had the same interests of creating a 3D audio visualiser. We used the web Audio API and Three.js to get this app working. I worked on the visual side of the project which meant most of my work was done in javascript using Three.js. I loved building this app as it was something I was very interested in and it was also a great way of exploring new frameworks. As for the future of this project I plan to continue to create more visualiser and experiment with different and interesting things you can do with Three.js.',
-        featureImage: 'images/threedee-insitu-01.png',
+        featureImage: 'images/threedee-insitu.png',
         image: [
           'one',
           'two'
@@ -62,13 +62,15 @@ app.Router = Backbone.Router.extend({
         content: 'BRIEF Billy Blue college of design holds a unique exhibition for each graduating class.PROCESS. Billy Blue college of design holds a unique exhibition for each graduating class. The project consisted of a few different teams of people including communication, branded, spacial, digital and a team of lecturers. As soon as the project started it was all in. First off though a brand and theme had to be chosen and after a numerous amount of thinking, designing and re-thinking the team had decided on ‘Specimen’ as our theme. It was now time to get down to the nitty gritty and start designing off this theme which was great. It alowed me to explore new programs and develop my digital skills. I played a makor role in the digital team creating animations which were used for pod projections, video elements on the website, promo teasers for the event and also used for promotional posters. Working on this project was a blast and also a great development of my skills.',
         featureImage: 'images/specimen-insitu-01.png',
         image: [
-          'one',
           'two'
         ],
         video: [
-          'one'
+          '//player.vimeo.com/video/54991203?color=be254d',
+          '//player.vimeo.com/video/54505418?color=be254d',
+          '//player.vimeo.com/video/52988457?color=be254d',
+          '//player.vimeo.com/video/51874767?color=be254d',
+          '//player.vimeo.com/video/54505413?color=be254d'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
       }),
        new app.Project({
         id: 5,
@@ -122,23 +124,23 @@ app.Router = Backbone.Router.extend({
       new app.Skill({
         id: 1,
         filterTags: '',
-        title: 'Photocrapper',
+        title: 'HTML Generative Art',
         content: 'Photocrapper was designed as a simple app where you could upload images of your choice where you could follow friends and view their images. The goal with this app was to be a learning experience for me to understand and enhance my programming skills. I aimed to understand how to create a simple app like instagram without the cool filters. This app was created as my first project and was a great learning experience, I intend on taking this further and adding some filters and sharing features.',
-        featureImage: 'images/specimen3.jpg',
+        featureImage: 'images/generative_art.png',
         image: [
-          'one',
+          'images/generative_art.png',
           'two'
         ],
-        projectLink: 'http://photocrapper.herokuapp.com/'
+        projectLink: 'http://daisymarie128.github.io/playing_with_genarative_art_html/'
       }),
       new app.Skill({
         id: 2,
         programsUSed: 'AutoDesk Maya, After Effects',
         title: 'Ocean',
-        content: 'This was a test to create a realistic ocean, I had to lower the quality of the video and only render a few seconds due to computer performance reasons.',
-        featureImage: 'images/specimen3.jpg',
+        content: 'This was a test to create a realistic ocean, I had to lower the quality of the video and only render a few seconds due to computer performance reasons. I created this using AutoDesks Maya dynamics. In future I would like to re-render this scene to its full length can not have to compress the file size for uploading.',
+        featureImage: 'images/oceans.png',
         video: '//player.vimeo.com/video/105139261?color=be254d',
-        projectLink: 'http://photocrapper.herokuapp.com/'
+        projectLink: 'https://vimeo.com/105139261'
       })
     ])
   },

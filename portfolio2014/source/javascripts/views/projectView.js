@@ -43,10 +43,10 @@ app.ProjectView = Backbone.View.extend({
     var projectView = Handlebars.compile(app.templates.projectView);
     var copy = projectView( this.model.toJSON() );
     list.$el.html( projectView( this.model.toJSON() ) );
-      list.$el.attr('id', 'pub-challenges-view');
+      list.$el.attr('id', 'project-view');
       $('#content').append( list.el );
-      console.log(projectView( this.model.toJSON() ))
-      console.log('hellll')
+      // console.log(projectView( this.model.toJSON() ))
+      // console.log('hellll')
 
   }
 });

@@ -13,6 +13,8 @@ $(document).ready(function () {
 
   app.router = new app.Router();
   Backbone.history.start();
+
+// $('footer').css({top: $(document).height()})
 });
 
 

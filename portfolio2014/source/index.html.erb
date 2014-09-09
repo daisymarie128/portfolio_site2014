@@ -30,7 +30,7 @@
       <h2 class="qf-title">quick facts</h2>
       <div class="qf-content">
         <ul>
-          <li><p>IM A 20 SOMETHING YEAR OLD WEB DEVLOPER AND I’M AS SHORT AS 7YEAR OLD</p></li>
+          <li><p>IM A 20 SOMETHING YEAR OLD WEB DEVELOPER AND I’M AS SHORT AS 7YEAR OLD</p></li>
           <li><p>I LOVE CODE AND I LOVE DESIGN</p></li>
           <li><p>I HATE BIRDS</p></li>
           <li><p>I DONT GET THAT MUCH MORE INTERESTING</p></li>
@@ -41,7 +41,13 @@
     <div id="boring-facts">
       <h2 class="bf-title">longer boring-er facts</h2>
       <div class="bf-content">
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web </p>
+        <p>
+        I'm extremley passionate about programming, design and innovative ideas.
+        In 2014 I completed the Web Development Immersive course at General Assembly.
+        In 2012 I completed a bachelor of Communication Design and specialised in Digital Media and animation. I'm experienced in many different programs including the Adobe Suite inparticular PS, Illustrator, After Effects, Flash, ID, AutoDesk Maya and Mudbox, Cinema4D, FinalCut pro + more. Apon graduating I received the Blues Progress Award for continuously striving for improvment in work.
+        After completing my degree I took some time off to travel and worked various jobs and freelanced in graphic design and digital media.
+
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web </p>
       </div><!--//////////close qf content //////-->
     </div><!--//////////close boring-facts//////-->
 
@@ -56,11 +62,11 @@
           <a href="#">Skills Lab</a>
         </ul> -->
         <nav class="cl-effect-2">
-          <a href="#"><span data-hover="0405 947 875">Phone</span></a>
-          <a href="#"><span data-hover="daisymarie128@hotmail.com">Email</span></a>
-          <a href="https://github.com/daisymarie128" target="_blank"><span data-hover="Go To GitHub">My Code</span></a>
-          <a href="https://au.linkedin.com/in/daisysmith/" target="_blank"><span data-hover="Palimpsest">Palimpsest</span></a>
-          <a href="#http://www.theloop.com.au/daisysmith/portfolio" target="_blank"><span data-hover="The Loop">The Loop</span></a>
+          <a href="#"><span data-hover="0405 947 875">Dont Prank Me</span></a>
+          <a href="#"><span class="email" data-hover="daisymarie128@hotmail.com">Send me an email. I love emails.</span></a>
+          <a href="https://github.com/daisymarie128" target="_blank"><span data-hover="GitHub">Code</span></a>
+          <a href="https://au.linkedin.com/in/daisysmith/" target="_blank"><span data-hover="LinkedIn">LinkedIn</span></a>
+          <a href="#https://www.theloop.com.au/daisysmit/portfolio" target="_blank"><span data-hover="The Loop">The Loop</span></a>
         </nav>
         </div><!--//////////////close contact content///-->
     </div><!--//////////////////close contact //////////-->
@@ -96,9 +102,6 @@
       <span>|</span>
       <button data-filter=".illustrator">Illustrator</button>
       <button data-filter=".ux">UX Design</button>
-      <button data-filter=".ae">After Effects</button>
-      <button data-filter=".film">Film</button>
-      <button data-filter=".dynamics">Dynamics</button>
     </div><!--///////////close filters //////-->
 
     <div id="image-holder">
@@ -116,9 +119,17 @@
   <a href="#portfolio"><div class="back">BACK</div></a>
     <ul>
       <div class="project-item-single">
+      <li class="title"><h2>{{title}}</h2></li>
+      {{#if projectLink}}
+      <li class="project-link"><a href="{{projectLink}}"><p>{{projectLink}}</p></a></li>
+      {{/if}}
+      <li class="content"><p>{{content}}</p></li>
       <img src="{{featureImage}}" class="project-image">
-        <li class="title"><h2>{{title}}</h2></li>
-        <li class="content"><h2>{{content}}</h2></li>
+      {{#if video}}
+      {{#each video}}
+      <iframe src="{{video}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="project-video"></iframe>
+      {{/each}}
+      {{/if}}
       </div><!--///////close project-item //////-->
     </ul>
 </script>
@@ -126,12 +137,15 @@
 <!--/////////////////////////////////////////////skills model template ////////////-->
 
 <script type='text/template' id='skills-model-template'>
-      <li class="title">{{title}}</li>
-      <img src="{{featureImage}}" class="view-project">
-      <li class="skillContent">{{content}}</li>
-      {{if video}}
-      <iframe src="{{video}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      {{end}}
+      <img src="{{featureImage}}" class="single-skill-image">
+      <div class="content-box">
+      <li class="skill-content">{{content}}</li>
+      <li class="project-link"><a href="{{projectLink}}" target="_blank">{{title}}</a></li>
+      </div><!--..........close contet box //-->
+      <!-- {{#if video}}
+      <iframe src="{{video}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="skills-video"></iframe>
+      {{/if}} -->
+      <div class="line"><div><!--/////close line //// -->
 </script>
 
 <!--///////////////////////////////////////////// skills template ////////////-->
