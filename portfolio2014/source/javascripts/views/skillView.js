@@ -14,6 +14,7 @@ app.SkillView = Backbone.View.extend({
   },
 
   render: function () {
+    $('.nav-bar a').css({'color': '#000'})
     var list = this;
     var skillView = Handlebars.compile(app.templates.skillView);
     var copy = skillView( this.model.toJSON() );

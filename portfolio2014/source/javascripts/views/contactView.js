@@ -17,7 +17,7 @@ app.ContactView = Backbone.View.extend({
   render: function () {
     // var indexView = this.template();
     // this.$el.html(indexView);
-
+    $('.nav-bar a').css({'color': '#000'})
     var contactView = app.templates.contactView;
     // _.template(app.templates.aboutView);
     this.$el.html(contactView);

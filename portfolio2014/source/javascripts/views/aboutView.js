@@ -16,6 +16,7 @@ app.AboutView = Backbone.View.extend({
 
   render: function () {
     $('body').css({'background-color': '#FFF'})
+    $('.nav-bar a').css({'color': '#000'})
     var aboutView = app.templates.aboutView;
     // _.template(app.templates.aboutView);
     this.$el.html(aboutView);

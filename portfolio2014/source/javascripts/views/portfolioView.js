@@ -23,6 +23,8 @@ app.PortfolioView = Backbone.View.extend({
     // console.log('rendering portfolio view')
     // $('#content').html(this.el);
     $('body').css({'background-color': '#FFF'})
+    $('.nav-bar a').css({'color': '#000'})
+
     // this is the new code for the project model i hope this works
     var list = this
     // console.log(list)

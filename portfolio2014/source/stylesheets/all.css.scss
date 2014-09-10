@@ -229,6 +229,7 @@ nav a:focus {
   top: 100px;
   padding: 0;
   margin: auto;
+  padding-bottom: 15%;
 }
 
 #portfolio{
@@ -463,11 +464,12 @@ button:active{
 /*///////// skills style /////////////*/
 
 #all-skill-view{
-    position: relative;
+  position: relative;
   width: 80%;
   top: 100px;
   padding: 0;
   margin: auto;
+  padding-bottom: 15%;
 }
 
 .single-skill-image{
@@ -528,6 +530,7 @@ button:active{
 #about-content{
   position: relative;
   top: 90px;
+  padding-bottom: 5%;
 }
 
 #about-content p{
@@ -562,7 +565,6 @@ button:active{
 }
 
 #quick-facts p{
-  font-weight: 900;
   color: #000;
   font-size: 1.2em;
   /*background-color: #FFD300;*/

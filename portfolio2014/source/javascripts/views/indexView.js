@@ -22,11 +22,18 @@ app.IndexView = Backbone.View.extend({
     // _.template(app.templates.aboutView);
     this.$el.html(indexView);
     $('#content').html(this.el);
-    console.log('rendering index')
-    $('body').css({'background-color': '#7BC794'})
+    console.log('rendering index');
+    $('body').css({'background-color': '#7BC794'});
+    $('.nav-bar a').css({'color': '#FFF'})
+    $('.nav-bar a::before').css({'background': '#FFF'})
+    $('.nav-bar a::after').css({'background': '#FFF'})
+    $('.nav-bar a:hover').css({'color': '#FFF'})
+    $('.nav-bar a:focus').css({'color': '#FFF'})
+
+    $('.idiot').fadeIn(1300);
     $('.bannana').animate({
     top:"9%",
-    },1500, "linear", function() {
+    },3500, "linear", function() {
     });
 
     $('.developer').fadeIn(1000);

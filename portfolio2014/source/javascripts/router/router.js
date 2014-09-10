@@ -36,9 +36,8 @@ app.Router = Backbone.Router.extend({
           'two'
         ],
         video: [
-          'one'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
+        projectLink: 'http://threedee-er.herokuapp.com/'
       }),
        new app.Project({
         id: 3,
@@ -51,9 +50,8 @@ app.Router = Backbone.Router.extend({
           'two'
         ],
         video: [
-          'one'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
+        projectLink: 'http://pubcrawlll.herokuapp.com/'
       }),
        new app.Project({
         id: 4,
@@ -65,27 +63,27 @@ app.Router = Backbone.Router.extend({
           'two'
         ],
         video: [
-          '//player.vimeo.com/video/54991203?color=be254d',
-          '//player.vimeo.com/video/54505418?color=be254d',
-          '//player.vimeo.com/video/52988457?color=be254d',
-          '//player.vimeo.com/video/51874767?color=be254d',
-          '//player.vimeo.com/video/54505413?color=be254d'
+          '//player.vimeo.com/video/54991203?byline=0&amp;color=7BC794',
+          '//player.vimeo.com/video/54991204?byline=0&amp;portrait=0&amp;color=7BC794',
+          '//player.vimeo.com/video/52988457?byline=0&amp;color=7BC794',
+          '//player.vimeo.com/video/51874767?byline=0&amp;color=7BC794',
+          '//player.vimeo.com/video/54505413?byline=0&amp;color=7BC794'
         ],
+        projectLink: 'specimen2012.com'
       }),
        new app.Project({
         id: 5,
-        title: 'Threedee',
-        filterTags: 'web-development three-js javascript',
-        content: 'Backbone is hell',
-        featureImage: 'images/specimen3.jpg',
+        title: 'Lightbulb Quote',
+        filterTags: 'animation design illustrator',
+        content: 'I created this short animation in 2011. The brief was to create an animation on using letters, which represented the quote from Albert Ienstein "To invent something, all you need is imagination and a big pile of junk." I complemented this with the song by Gene Simons, Imagination. I created all the elements in Illustrator and animated the project in After Effects.',
+        featureImage: 'images/lightbulb.png',
         image: [
           'one',
           'two'
         ],
         video: [
-          'one'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
+        projectLink: 'http://vimeo.com/52988455'
       }),
        new app.Project({
         id: 6,
@@ -98,24 +96,21 @@ app.Router = Backbone.Router.extend({
           'two'
         ],
         video: [
-          'one'
         ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
+        projectLink: 'muaythaistoresydney.com'
       }),
        new app.Project({
         id: 7,
         title: "Mountains",
         filterTags: 'design illustrator ux',
-        content: 'Backbone is hell',
+        content: 'This was a mockup made for a class project. The client was a small skateboarding company looking to make their mark on the web. The ux of this site was meant to be simplistic and basic so users could navigate around and be made for multiplatform without a very drastic style change.',
         featureImage: 'images/mountains-insitu-01.png',
         image: [
           'one',
           'two'
         ],
         video: [
-          'one'
-        ],
-        projectLink: 'http://tadx-threedee.herokuapp.com/'
+        ]
       })
     ]),
 
@@ -139,8 +134,17 @@ app.Router = Backbone.Router.extend({
         title: 'Ocean',
         content: 'This was a test to create a realistic ocean, I had to lower the quality of the video and only render a few seconds due to computer performance reasons. I created this using AutoDesks Maya dynamics. In future I would like to re-render this scene to its full length can not have to compress the file size for uploading.',
         featureImage: 'images/oceans.png',
-        video: '//player.vimeo.com/video/105139261?color=be254d',
+        video: '//player.vimeo.com/video/105139261?byline=0&amp;color=7BC794',
         projectLink: 'https://vimeo.com/105139261'
+      }),
+      new app.Skill({
+        id: 3,
+        programsUSed: 'After Effects, AE Script',
+        title: 'Orb',
+        content: 'This was a test to create a realistic ocean, I had to lower the quality of the video and only render a few seconds due to computer performance reasons. I created this using AutoDesks Maya dynamics. In future I would like to re-render this scene to its full length can not have to compress the file size for uploading.',
+        featureImage: 'images/orb.png',
+        video: '//player.vimeo.com/video/105139261?byline=0&amp;color=7BC794',
+        projectLink: 'http://vimeo.com/54505411'
       })
     ])
   },

@@ -37,7 +37,8 @@ app.ProjectView = Backbone.View.extend({
     // console.log(copy)
     // console.log(this.$el)
     // console.log(this.model.toJSON())
-
+    $('body').css({'background-color': '#FFF'})
+    $('.nav-bar a').css({'color': '#000'})
     var list = this;
     // console.log(list.$el)
     var projectView = Handlebars.compile(app.templates.projectView);
